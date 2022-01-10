@@ -1,6 +1,5 @@
 // level easy
 
-const { findIndex } = require("underscore")
 
 // Given a and b, your function should return the value of a power b
 // Example:
