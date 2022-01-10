@@ -164,33 +164,94 @@
 // Example:
 // Input: minDate('02/05/2021', '24/01/2021') ––> Output: 24/01/2021
 
-function minDate(date1,date2){
-    const d1 = date1.split("/")
-    const d2 = date2.split("/")
-    if(d1[0]===d2[0]&&d1[1]===d2[1]&&d1[2]===d2[2])
-        console.log("both are equal")
-    else {
-        if(d1[2]>d2[2]){
-            console.log(d1)
-        }
-        else if(d1[2]<d2[2]){
-            console.log(d2)
-        }
-        else{
-            if(d1[1]>d2[1])
-                console.log(d1)
-            else if(d1[1]<d2[1])
-                console.log(d2)
-                else{
-                    if(d1[0]>d2[0])
-                        console.log(d1)
-                    else
-                        console.log(d2)
-                }
-        }
-    }
+// function minDate(date1,date2){
+//     const d1 = date1.split("/")
+//     const d2 = date2.split("/")
+//     if(d1[0]===d2[0]&&d1[1]===d2[1]&&d1[2]===d2[2])
+//         console.log("both are equal")
+//     else {
+//         if(d1[2]>d2[2]){
+//             console.log(d1)
+//         }
+//         else if(d1[2]<d2[2]){
+//             console.log(d2)
+//         }
+//         else{
+//             if(d1[1]>d2[1])
+//                 console.log(d1)
+//             else if(d1[1]<d2[1])
+//                 console.log(d2)
+//                 else{
+//                     if(d1[0]>d2[0])
+//                         console.log(d1)
+//                     else
+//                         console.log(d2)
+//                 }
+//         }
+//     }
     
+// }
+
+// minDate('02/06/2023','31/06/2023')
+
+// Advanced
+
+// Write a function which generates a secret code from a given string, by shifting characters of alphabet by N places. Example:
+// Input: encodeString("neogcamp", 2) ––> Output: pgqiecor
+// Explanation: 2 represents shifting alphabets by 2 places. a –> c, b –> d, c –> e and so on.100]
+
+// function encodeString(str,num){
+//     var arr=str.replaceAll(' ','').split('')
+//     // console.log(arr)
+//     var newArr= arr.map(i=>
+//         i.charCodeAt(0)+num //add ascii code of each character to the num
+//     )
+//     console.log(newArr)
+    // console.log(newArr.join(",")) // converting in string
+//     var str=""
+//     newArr.map(i=>{
+
+//         let code = String.fromCharCode(i)//pass ascii value as arguements here
+//         str +=code
+//     })
+//     console.log(str)
+    
+    
+// }
+// encodeString("neog",1)
+
+// Given a sentence, return a sentence with first letter of all words as capital.
+// Example:
+// Input: toSentenceCase('we are neoGrammers') ––> Output: We Are NeoGrammers
+
+// function toSentenceCase(str){
+//     var arr = str.split("")
+//     for(i=0;i<str.length;i++){
+//         if(str[i]=== ' ')
+//         str[i+1].toUpperCase()
+//     }
+//     return str
+// }
+// console.log(toSentenceCase("i am neogrammer"))
+
+// Given an array of numbers, your function should return an array in the ascending order.
+// Example:
+// Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
+
+function sortArray(arr){
+    for(let i=0;i<arr.length;i++){
+        
+    }
+    return arr
 }
+const sortedArr = sortArray([100,83,32,9,45,61])
+console.log(sortedArr)
 
-minDate('02/06/2023','31/06/2023')
+// Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
+// Example:
+// Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
 
+function reverseCharactersOfWord(str){
+    return str.split('').reverse().join('')
+}
+console.log(reverseCharactersOfWord("we are neoGrammers"))
