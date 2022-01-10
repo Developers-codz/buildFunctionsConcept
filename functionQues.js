@@ -130,15 +130,15 @@
 
 // ES3
 
-function mergeArray(arr1,arr2){
-    console.log(arr1.concat(arr2))
-}
-mergeArray([2,3,5],[6,4,7])
+// function mergeArray(arr1,arr2){
+//     console.log(arr1.concat(arr2))
+// }
+// mergeArray([2,3,5],[6,4,7])
 
 // ES6
 
-const mergedArr = (arr1,arr2) => arr1.concat(arr2)
-console.log(mergedArr([2,3,4],[6,7,8]))
+// const mergedArr = (arr1,arr2) => arr1.concat(arr2)
+// console.log(mergedArr([2,3,4],[6,7,8]))
 
 
 
@@ -146,19 +146,19 @@ console.log(mergedArr([2,3,4],[6,7,8]))
 // Given a string and an index, your function should return the character present at that index in the string.
 // Example:
 // Input: charAt("neoGcamp", 4) ––> Output: c
-str = "kajal the upcoming neograd"
+// str = "kajal the upcoming neograd"
 
-console.log(str.charAt(6))
+// console.log(str.charAt(6))
 
-function findCharAt(str,index){
-    console.log(str.charAt(index))
-}
-findIndex("kajal the upcoming neograd",13)
+// function findCharAt(str,index){
+//     console.log(str.charAt(index))
+// }
+// findIndex("kajal the upcoming neograd",13)
 
 // ES6
 
-var indexedLetter = (str,index)=>str.charAt(index)
-console.log(indexedLetter("neog camp",8))
+// var indexedLetter = (str,index)=>str.charAt(index)
+// console.log(indexedLetter("neog camp",8))
 
 // Given two dates, your function should return which one comes before the other.
 // Example:
@@ -167,9 +167,30 @@ console.log(indexedLetter("neog camp",8))
 function minDate(date1,date2){
     const d1 = date1.split("/")
     const d2 = date2.split("/")
-    console.log(d1,d2)
+    if(d1[0]===d2[0]&&d1[1]===d2[1]&&d1[2]===d2[2])
+        console.log("both are equal")
+    else {
+        if(d1[2]>d2[2]){
+            console.log(d1)
+        }
+        else if(d1[2]<d2[2]){
+            console.log(d2)
+        }
+        else{
+            if(d1[1]>d2[1])
+                console.log(d1)
+            else if(d1[1]<d2[1])
+                console.log(d2)
+                else{
+                    if(d1[0]>d2[0])
+                        console.log(d1)
+                    else
+                        console.log(d2)
+                }
+        }
+    }
     
 }
 
-console.log(minDate('02/05/2021','24/01/2021'))
+minDate('02/06/2023','31/06/2023')
 
