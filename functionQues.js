@@ -224,25 +224,34 @@
 // Example:
 // Input: toSentenceCase('we are neoGrammers') ––> Output: We Are NeoGrammers
 
-// function toSentenceCase(str){
-//     var arr = str.split("")
-//     for(i=0;i<str.length;i++){
-//         if(str[i]=== ' ')
-//         str[i+1].toUpperCase()
-//     }
-//     return str
-// }
-// console.log(toSentenceCase("i am neogrammer"))
+function toSentenceCase(str){
+    var splittedArr = str.split(" ")
+    for(i=0;i<splittedArr.length;i++){
+        splittedArr[i] = splittedArr[i][0].toUpperCase() + splittedArr[i].substring(1)
+        
+    }
+    return splittedArr.join(" ")
+}
+console.log(toSentenceCase("we are neogrammer"))
 
 // Given an array of numbers, your function should return an array in the ascending order.
 // Example:
 // Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
 
-function sortArray(arr){
-    for(let i=0;i<arr.length;i++){
-        
+function sortArray(array){
+    var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        var tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
     }
-    return arr
+    }
+    return array
 }
 const sortedArr = sortArray([100,83,32,9,45,61])
 console.log(sortedArr)
@@ -251,7 +260,20 @@ console.log(sortedArr)
 // Example:
 // Input: reverseCharactersOfWord('we are neoGrammers') –––> Output: ew era sremmarGoen
 
-function reverseCharactersOfWord(str){
-    return str.split('').reverse().join('')
-}
-console.log(reverseCharactersOfWord("we are neoGrammers"))
+// function reverseCharactersOfWord(str){
+//     return str.split('').reverse().join('')
+// }
+// console.log(reverseCharactersOfWord("we are neoGrammers"))
+
+// let i;
+// for(i=0;i<=5;i++){
+//     setTimeout(() => {
+//         console.log(i)
+//     }, 0);
+// }
+
+// for(let j=0;j<=5;j++){
+//     setTimeout(() => {
+//         console.log(j)
+//     }, 0);
+// }
